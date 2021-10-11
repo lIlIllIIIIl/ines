@@ -1,0 +1,321 @@
+*{
+    margin: 0;
+}
+
+body{
+    background: #E8E8E8;
+    color: #000000;
+    overflow: hidden;
+}
+
+/***** FIGMA ******/
+
+.overall{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+}
+
+.blbl{
+    height: 100vh;
+    width: 15px;
+}
+
+.wrapper{
+    /* position: absolute; */
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    /* grid-template-rows: repeat(24, 10px); */
+    width: 100%;
+    height: 100vh;
+}
+
+.wrapper .column{
+    border: solid black 0.1px;
+    grid-gap: 0;
+}
+
+.wrapper .r{
+    border: solid black 0.1px;
+    grid-gap: 0;
+}
+
+/***** TEXT *****/
+
+@font-face { font-family: Migra; font-weight: extralight; src: url('../fonts/Migra-Extralight.otf');}
+
+h1{
+
+    font-family: Migra;
+    font-weight: 400;
+    /* font-style: normal; */
+    font-size: 65px;
+    line-height: 60px;
+    margin: 0;
+    padding: 0;
+}
+h2{
+    font-family: Migra, sans-serif;
+    font-weight: 400;
+    /* font-style: normal; */
+    font-size: 45px;
+    line-height: 40px;
+}
+h4{
+    font-family: neue-haas-grotesk-display, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 20px;
+    display: inline;
+}
+.smallcap{
+    font-family: neue-haas-grotesk-display, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.highcap{
+    font-family: neue-haas-grotesk-display, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+/* HEADER */
+
+header{
+    height: 110px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header_clickable{
+    margin-right: 30px;
+}
+
+.menu_item{
+    text-transform: uppercase;
+}
+
+/*  */
+
+section.container{
+    margin: 0 74px;
+    height: 100vh;
+}
+
+.vertical_blank_1{
+    height: 100%;
+    width: 59px;
+}
+
+.vertical_blank_2{
+    height: 100%;
+    width: 115px;
+}
+
+.vertical_blank_3{
+    height: 100%;
+    width: 764px;
+}
+
+.vertical_blank_4{
+    height: 100%;
+    width: 160px;
+}
+
+.blank_header{
+    width: 100%;
+    height: 140px;
+}
+
+.horizontal_blank_1{
+    width: 100%;
+    height: 80px;
+}
+
+.horizontal_blank_2{
+    width: 100%;
+    height: 40px;
+}
+
+.horizontal_blank_3{
+    width: 100%;
+    height: 90px;
+}
+
+/*  */
+
+div.intro{
+    /* height: 180px; */
+    height: auto;
+    display: flex;
+    /* margin: 205px 75px 0  0; */
+    flex-direction: row;
+}
+
+.intro .ines{
+    height: 80px;
+    width: 355px;
+    display: flex;
+    flex-direction: column;
+}
+
+.intro .what{
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.intro .what span, .intro .what h4{
+    margin-bottom: 60px;
+    width: auto;
+}
+
+.what_first{
+    margin-top: 40px;
+}
+
+.intro .cap{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cap .work{
+    margin-bottom: 20px;
+}
+
+p.presentation{
+    width: 237px;
+}
+
+.last_intro{
+    display: flex;
+    flex-direction: row;
+}
+
+/***** WORK *****/
+
+.work_list{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    left: 0;
+    width: 100%;
+    height: auto;
+    border-top: solid 1px black;
+}
+
+.work_list .single_work{
+    /* border-left: solid 1px black; */
+    border-right: solid 1px black;
+    height: auto;
+    width: 470px;
+}
+
+.single_work .project{
+    margin: 40px 44px;
+}
+
+.project h4{
+    margin: 23px 0 18px 0;
+    display: block;
+}
+
+.project .project_image{
+    width: 382px;
+    height: 470px;
+}
+
+.project .project_infos{
+    display: flex;
+    flex-direction: column;
+}
+
+.project_infos span{
+    margin-bottom: 9px;
+}
+
+/***** CONTACT *****/
+
+.build{
+    display: flex;
+    flex-direction: row;
+}
+
+.build h1{
+    width: 550px;
+    text-align: right;
+
+}
+
+.contact_catch{
+    width: 235px;
+}
+
+.contact_mail{
+    width: 100%;
+    text-align: right;
+}
+
+footer.footer_contact{
+    box-sizing: border-box;
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 42px 74px;
+}
+
+.footer_contact_left{
+    display: flex;
+    flex-direction: row;
+}
+
+.footer_contact_left .contact_media a{
+    margin-right: 20px;
+}
+
+footer .backhome{
+    margin-right: 45px;
+}
+
+.contact_alexis{
+    text-decoration: underline;
+}
+
+/***** Archive *****/
+
+.archive_start{
+    display: flex;
+    width: 631px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.archive_start span{
+    margin-left: 35px;
+}
