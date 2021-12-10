@@ -21,6 +21,11 @@ body{
 	scrollbar-width: none;
 }
 
+*::selection{
+	color: blue;
+	background: transparent;
+}
+
 * ::-webkit-scrollbar{
 	display: none;
 }
@@ -285,7 +290,6 @@ section.container{
 	border-bottom: solid 1px black;
 }
 
-
 footer.footer_contact{
 	box-sizing: border-box;
 	width: 100vw;
@@ -324,31 +328,28 @@ section.container_project{
 	background-color: #E8E8E8;
 }
 
-.project_page_prez{
+.project_page_intro{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 }
 
-.project_page_name{
-	width: 590px;
-}
-
-.project_page_intro{
+.project_page_prez{
 	display: flex;
 	flex-direction: column;
-	height: 620px;
 	justify-content: space-between;
-	}
+}
+
+.project_page_name{
+	width: 587px;
+}
 
 .project_page_infos{
 	display: flex;
 	flex-direction: column;
-	margin-top: 70px;
 }
 
-.explore{
-	position: absolute;
-	top: 837px;
-	left: 779px;
+.altTitle{
+	width: 255px;
+
 }
