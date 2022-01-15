@@ -125,6 +125,33 @@ a{
 	text-decoration: none;
 }
 
+a:hover{
+	cursor: pointer;
+}
+
+/* H1 ANIMATION */
+
+
+.content__paragraph{
+	overflow: hidden;
+}
+
+.frame__about-item{
+	display: none;
+}
+
+.frame__about-item--current{
+	display: inline-block;
+}
+
+.content__item{
+	opacity: 0;
+}
+.content__item--current{
+	opacity: 1;
+}
+
+
 /* HEADER */
 
 header{
