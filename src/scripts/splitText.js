@@ -7,25 +7,25 @@ const titles = document.querySelectorAll('.content__item--title');
 
 Splitting();
 
-let DOM = {
-	content: {
-		title: {
-			section: document.querySelector('.content__item--title'),
-			get chars() {
-				return this.section.querySelectorAll('.content__paragraph .word > .char, .whitespace')
-			},
-			isVisible: false
-		}
-	},
-	links: {
-		title: {
-			anchor: document.querySelector('a.frame__empty'),
-			get stateElement() {
-				return this.anchor.children;
-			}
-		},
-	}
-};
+// let DOM = {
+// 	content: {
+// 		title: {
+// 			section: document.querySelector('.content__item--title'),
+// 			get chars() {
+// 				return this.section.querySelectorAll('.content__paragraph .word > .char, .whitespace')
+// 			},
+// 			isVisible: false
+// 		}
+// 	},
+// 	links: {
+// 		title: {
+// 			anchor: document.querySelector('a.frame__empty'),
+// 			get stateElement() {
+// 				return this.anchor.children;
+// 			}
+// 		},
+// 	}
+// };
 
 const timelineSettings = {
 	staggerValue: 0.05,
@@ -37,15 +37,34 @@ const timelineSettings = {
 
 gsap.registerPlugin(ScrollTrigger);
 
+const timeline3 = gsap.timeline();
 
-const timeline2 = gsap.timeline({
-	scrollTrigger: {
-		trigger: ".titross",
-		start: 'center 100%',
-		scrub: false,
-		// markers: true,
-	}
+
+timeline3.to(".c",
+{
+	y: 100,
+	duration: 500
 })
+
+
+ScrollTrigger.create({
+	trigger: ".content__item--title",
+	animation: timeline3,
+	markers: true,
+	start: "top-=100px center",
+	end: "top-=100px center",
+	scrub: 0,
+})
+
+
+// const timeline2 = gsap.timeline({
+// 	scrollTrigger: {
+// 		trigger: ".titross",
+// 		start: 'center 100%',
+// 		scrub: false,
+// 		markers: true,
+// 	}
+// })
 
 // gsap.to('.content__item--title', {
 // 	scrollTrigger: {
@@ -83,9 +102,8 @@ const timeline2 = gsap.timeline({
 
 
 
-
-
 // const timeline = gsap.timeline({paused: true})
+// const timeline2 = gsap.timeline({paused: true})
 // timeline2
 // 	.addLabel('start')
 // 	.add( () => {
@@ -102,16 +120,16 @@ const timeline2 = gsap.timeline({
 // 		y: '0%',
 // 		stagger: 0.04,
 // 	}
-// 	// , timelineSettings.staggerValue, 'switchtime'
+// 	, timelineSettings.staggerValue, 'switchtime'
 // 	)
 
-	const switchContent = () => {
-		// DOM.links.title.stateElement[0].classList[DOM.content.title.isVisible ? 'add' : 'remove']('frame__empty-item--current');
-		// DOM.links.title.stateElement[1].classList[DOM.content.title.isVisible ? 'remove' : 'add']('frame__empty-item--current');
-		timeline2[DOM.content.title.isVisible ? 'reverse' : 'play']();
-		DOM.content.title.isVisible = !DOM.content.title.isVisible;
-	};
+	// const switchContent = () => {
+	// 	// DOM.links.title.stateElement[0].classList[DOM.content.title.isVisible ? 'add' : 'remove']('frame__empty-item--current');
+	// 	// DOM.links.title.stateElement[1].classList[DOM.content.title.isVisible ? 'remove' : 'add']('frame__empty-item--current');
+	// 	timeline2[DOM.content.title.isVisible ? 'reverse' : 'play']();
+	// 	DOM.content.title.isVisible = !DOM.content.title.isVisible;
+	// };
 
-	DOM.links.title.anchor.addEventListener('click', () => switchContent());
+	// DOM.links.title.anchor.addEventListener('click', () => switchContent());
 	
-	switchContent();
+	// switchContent();
