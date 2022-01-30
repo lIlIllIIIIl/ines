@@ -25,15 +25,14 @@ body{
 * ::-webkit-scrollbar{
 	display: none;
 }
-
+/*
 .scroller{
 	height: 100vh;
 	width: 100vw;
 	/* background: red; */
-	overflow-y: scroll;
-	/* overflow-x: hidden; */
-	-ms-scroll-snap-type: y mandatory;
-	    scroll-snap-type: y mandatory;
+	/* overflow-y: scroll; */
+	/* overflow-x: hidden; *//*
+	scroll-snap-type: y mandatory;
 	scrollbar-width: none;
 }
 
@@ -41,7 +40,7 @@ body{
 	scroll-snap-align: start;
 }
 
-/***** FIGMA ******/
+/* **** FIGMA ***** */
 
 .overall{
 	position: absolute;
@@ -129,6 +128,17 @@ a:hover{
 	cursor: pointer;
 }
 
+span.link_span:hover{
+	cursor: pointer;
+}
+
+.click_copy{
+	display: none;
+	position: relative;
+	top: -25px;
+	left: -70px;
+}
+
 /* H1 ANIMATION */
 
 
@@ -144,12 +154,12 @@ a:hover{
 	display: inline-block;
 }
 
-.content__item{
+/* .content__item{
 	opacity: 0;
 }
 .content__item--current{
-	opacity: 1;
-}
+	opacity: 1!important;
+} */
 
 
 /* HEADER */
@@ -163,7 +173,7 @@ header{
 	justify-content: space-around; */
 	position: fixed;
 	top: 5.5vh;
-	mix-blend-mode: exclusion;
+	/* mix-blend-mode: exclusion; */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -482,6 +492,7 @@ p.presentation{
 	width: 38.2vw;
 	/* width: 550px; */
 	text-align: right;
+	height: 105%;
 
 }
 
@@ -492,6 +503,7 @@ p.presentation{
 .contact_mail{
 	width: auto;
 	margin-left: 16.3vw;
+	height: 107%;
 	/* margin-left: 470px; */
 	/* text-align: right; */
 }
@@ -713,9 +725,8 @@ footer .backhome{
 }
 
 
-
-
-.content__item--title{
+.carré{
+/* .content__item--title{ */
 	width: 100px;
 	height: 100px;
 	background-color: #fff;
@@ -729,15 +740,106 @@ footer .backhome{
 
 .a{
 	background: red;
-	top: 1500px;
+	top: 1300px;
 }
 .b{
 	background: blue;
-		top: 1800px;
+		top: 1500px;
 
 }
 .c{
 	background: yellow;
-		top: 1300px;
+		top: 1800px;
 
+}
+
+
+.d{
+	background: black;
+	top: 4000px;
+}
+
+
+
+
+
+/* Most of these styles could be removed but are for the demo to look better */
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  font-weight: 300;
+}
+
+a {
+  color: black;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+.full-screen {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#masthead {
+  position: fixed;
+  display: flex;
+  z-index: 9999;
+}
+#masthead a {
+  padding: 1rem 2rem;
+}
+
+
+#panels #panels-container {
+  height: 100vh;
+  display: flex;
+  flex-wrap: nowrap;
+  /* padding: 0; */
+  overflow: hidden;
+}
+#panels #panels-container .panel {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  color: #333;
+  text-align: left;
+  border-right: 1px solid #f00;
+}
+#panels #panels-container .panel img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+#panels #panels-container .panel .panels-navigation {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+#panels #panels-container .panel .anchor-panel,
+#panels #panels-container .panel .nav-panel {
+  color: #000;
+  text-transform: uppercase;
+  margin-right: 2rem;
+}
+#panels #panels-container .panels-navigation {
+  position: absolute;
+  width: 100%;
+  bottom: 2rem;
+  right: 2rem;
 }

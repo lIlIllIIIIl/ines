@@ -6593,67 +6593,148 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var titles = document.querySelectorAll('.content__item--title');
-splitting__WEBPACK_IMPORTED_MODULE_2___default()(); // let DOM = {
-// 	content: {
-// 		title: {
-// 			section: document.querySelector('.content__item--title'),
-// 			get chars() {
-// 				return this.section.querySelectorAll('.content__paragraph .word > .char, .whitespace')
-// 			},
-// 			isVisible: false
-// 		}
-// 	},
-// 	links: {
-// 		title: {
-// 			anchor: document.querySelector('a.frame__empty'),
-// 			get stateElement() {
-// 				return this.anchor.children;
-// 			}
-// 		},
-// 	}
-// };
+splitting__WEBPACK_IMPORTED_MODULE_2___default()();
+gsap__WEBPACK_IMPORTED_MODULE_3__.gsap.registerPlugin(ScrollTrigger);
+var tab = [];
+var DOM = {
+  content: {
+    title: {
+      section: document.querySelectorAll('.content__item--title'),
+
+      get chars() {
+        this.section.forEach(function (idk) {
+          tab.push(idk.querySelectorAll('.content__paragraph .word > .char, .whitespace'));
+        });
+        return tab; // return this.section[0].querySelectorAll('.content__paragraph .word > .char, .whitespace')
+      },
+
+      isVisible: false
+    }
+  }
+}; // gsap.set(".content__item", { opacity: 0 })
 
 var timelineSettings = {
   staggerValue: 0.05,
   // staggerValue: 0.014,
   charsDuration: 0.5
-}; // console.log(gsap);
-
-gsap__WEBPACK_IMPORTED_MODULE_3__.gsap.registerPlugin(ScrollTrigger);
-var timeline3 = gsap__WEBPACK_IMPORTED_MODULE_3__.gsap.timeline();
-timeline3.to(".c", {
-  y: 100,
-  duration: 500
+};
+var timeline0 = gsap__WEBPACK_IMPORTED_MODULE_3__.gsap.timeline();
+timeline0.set(DOM.content.title.chars[1], {
+  opacity: 1,
+  ease: 'Power3.easeIn',
+  y: '200%'
+}, 'switchtime').to(DOM.content.title.chars[1], timelineSettings.charsDuration, {
+  ease: 'Power3.easeOut',
+  y: '0%',
+  stagger: 0.04
 });
 ScrollTrigger.create({
-  trigger: ".content__item--title",
+  trigger: ".title_ines",
+  animation: timeline0,
+  // markers: true,
+  start: "center center",
+  end: "center center",
+  toggleActions: "play none none none" // scrub: 1,
+
+});
+var timeline1 = gsap__WEBPACK_IMPORTED_MODULE_3__.gsap.timeline();
+timeline1.set(DOM.content.title.chars[2], {
+  opacity: 1,
+  ease: 'Power3.easeIn',
+  y: '200%'
+}, 'switchtime').to(DOM.content.title.chars[2], timelineSettings.charsDuration, {
+  ease: 'Power3.easeOut',
+  y: '0%',
+  stagger: 0.04
+});
+ScrollTrigger.create({
+  trigger: ".title_work",
+  animation: timeline1,
+  // markers: true,
+  start: "center center",
+  end: "center center",
+  toggleActions: "play none none none" // scrub: 1,
+
+});
+var timeline2 = gsap__WEBPACK_IMPORTED_MODULE_3__.gsap.timeline();
+timeline2.set(DOM.content.title.chars[3], {
+  opacity: 1,
+  ease: 'Power3.easeIn',
+  y: '600%'
+}, 'switchtime').to(DOM.content.title.chars[3], timelineSettings.charsDuration, {
+  ease: 'Power3.easeOut',
+  y: '0%',
+  stagger: 0.02
+});
+ScrollTrigger.create({
+  trigger: ".title_contact",
+  animation: timeline2,
+  // markers: true,
+  start: "top center",
+  end: "top center",
+  toggleActions: "play none none none" // scrub: 1,
+
+});
+var timeline3 = gsap__WEBPACK_IMPORTED_MODULE_3__.gsap.timeline();
+timeline3.set(DOM.content.title.chars[4], {
+  opacity: 1,
+  ease: 'Power3.easeIn',
+  y: '200%'
+}, 'switchtime').to(DOM.content.title.chars[4], timelineSettings.charsDuration, {
+  ease: 'Power3.easeOut',
+  y: '0%',
+  stagger: 0.02
+});
+ScrollTrigger.create({
+  trigger: ".title_mail",
   animation: timeline3,
-  markers: true,
-  start: "top-=100px center",
-  end: "top-=100px center",
-  scrub: 0
-}); // const timeline2 = gsap.timeline({
-// 	scrollTrigger: {
-// 		trigger: ".titross",
-// 		start: 'center 100%',
-// 		scrub: false,
-// 		markers: true,
-// 	}
+  // markers: true,
+  start: "center bottom-=150px",
+  end: "center bottom-=150px",
+  toggleActions: "play none none none" // scrub: 1,
+
+}); // CARRES
+// gsap.registerPlugin(ScrollTrigger);
+// gsap.set('.carré', {opacity: 0, })
+// const boxes = gsap.utils.toArray('.carré');
+// boxes.forEach(box => {
+//     gsap.to(box, { 
+//         opacity: 1,
+//         scrollTrigger: {
+//             trigger: box,
+//             start: "center center",
+//             end: "center center",
+//             markers: true,
+//             toggleActions: "play none none none",
+//             // scrub: true
+//         }
+//     })
+// });
+// let timeline = gsap.timeline();
+// timeline
+// .to(".a",
+// {
+// 	x: 400,
+// 	duration: 200,
 // })
-// gsap.to('.content__item--title', {
-// 	scrollTrigger: {
-// 		markers: true,
-// 		start: 'top top',
-// 		trigger: '.content__item--title'
-// 	},
-// 	y: '200%',
-// 	duration: 2,
+// .to(".b",
+// {
+// 	x: 300,
+// 	duration: 300,
 // })
-// const timeline = gsap.timeline({paused: true})
-// timeline2
+// ScrollTrigger.create({
+// 	trigger: ".a",
+// 	animation: timeline,
+// 	markers: true,
+// 	start: "center center",
+// 	end: "center center",
+// 	scrub: 0,
+// })
+// -----ARCHIVE------
+// const timeline1 = gsap.timeline({paused: true})
+// timeline1
 // 	.add( () => {
-// 		DOM.content.title.section.classList.toggle('content__item--current');
+// 		DOM.content.title.section[0].classList.add('.content__item--current');
 // 	})
 // 	// Start values for the title section elements that will animate in
 // 	.set(DOM.content.title.chars, {
@@ -6666,36 +6747,89 @@ ScrollTrigger.create({
 // 		y: '0%',
 // 		stagger: 0.04,
 // 	}
-// 	// , timelineSettings.staggerValue, 'switchtime'
+// 	, timelineSettings.staggerValue, 'switchtime',
+// 	console.log(DOM.content.title.section[0].classList.toggle('.content__item--current')),
 // 	)
-// const timeline = gsap.timeline({paused: true})
+// gsap.registerPlugin(ScrollTrigger);
+// gsap.set(".content__item--title", { opacity: 0, })
+// const boxes = gsap.utils.toArray(".content__item--title");
+// boxes.forEach(box =>{
+// 	console.log("enter trigger");
+// 	gsap.to(box, {
+// 		opacity: 1,
+// 		scrollTrigger: {
+// 			trigger: box,
+// 			animation: timeline1,
+// 			start: "center top",
+// 			end: "center top",
+// 			markers: true,
+// 			toggleActions: "play none none none",
+// 			// scrub: 0,
+// 		}
+// 	})
+// })
+// const timeline1 = gsap.timeline({paused: true})
+// timeline1
+// 	.add( () => {
+// 		DOM.content.title.section[0].classList.toggle('content__item--current');
+// 	})
+// 	// Start values for the title section elements that will animate in
+// 	.set(DOM.content.title.chars[0], {
+// 		// opacity: 1,
+// 		ease: 'Power3.easeIn',
+// 		y: '200%'
+// 	}, 'switchtime')
+// 	// Stagger the animation of the title section chars
+// 	.to( DOM.content.title.chars[0], timelineSettings.charsDuration, {
+// 		ease: 'Power3.easeOut',
+// 		y: '0%',
+// 		stagger: 0.04,
+// 	}
+// 	, timelineSettings.staggerValue, 'switchtime',
+// 	)
 // const timeline2 = gsap.timeline({paused: true})
 // timeline2
-// 	.addLabel('start')
-// 	.add( () => {
-// 		DOM.content.title.section.classList.toggle('content__item--current');
-// 	})
+// 	// .add( () => {
+// 	// 	DOM.content.title.section[1].classList.toggle('content__item--current');
+// 	// })
 // 	// Start values for the title section elements that will animate in
-// 	.set(DOM.content.title.chars, {
+// 	.set(DOM.content.title.chars[1], {
+// 		opacity: 1,
 // 		ease: 'Power3.easeIn',
 // 		y: '200%'
 // 	}, 'switchtime')
 // 	// Stagger the animation of the title section chars
-// 	.to( DOM.content.title.chars, timelineSettings.charsDuration, {
+// 	.to( DOM.content.title.chars[1], timelineSettings.charsDuration, {
 // 		ease: 'Power3.easeOut',
 // 		y: '0%',
 // 		stagger: 0.04,
 // 	}
-// 	, timelineSettings.staggerValue, 'switchtime'
+// 	, timelineSettings.staggerValue, 'switchtime',
+// 	console.log("timeline2"),
 // 	)
-// const switchContent = () => {
-// 	// DOM.links.title.stateElement[0].classList[DOM.content.title.isVisible ? 'add' : 'remove']('frame__empty-item--current');
-// 	// DOM.links.title.stateElement[1].classList[DOM.content.title.isVisible ? 'remove' : 'add']('frame__empty-item--current');
-// 	timeline2[DOM.content.title.isVisible ? 'reverse' : 'play']();
-// 	DOM.content.title.isVisible = !DOM.content.title.isVisible;
-// };
-// DOM.links.title.anchor.addEventListener('click', () => switchContent());
-// switchContent();
+// gsap.registerPlugin(ScrollTrigger);
+// // gsap.set(".content", { opacity: 0, })
+// gsap.to(DOM.content.title.section[1], { 
+// 	scrollTrigger: {
+// 		trigger: DOM.content.title.section[1],
+// 		// animation: timeline2,
+// 		opacity: 1,
+// 		start: "center center",
+// 		end: "center center",
+// 		markers: true,
+// 		toggleActions: "play none none none",
+// 		// scrub: true
+// 	},
+// })
+// 	const switchContent = () => {
+// 		// DOM.links.title.stateElement[0].classList[DOM.content.title.isVisible ? 'add' : 'remove']('frame__empty-item--current');
+// 		// DOM.links.title.stateElement[1].classList[DOM.content.title.isVisible ? 'remove' : 'add']('frame__empty-item--current');
+// 		timeline1[DOM.content.title.isVisible ? 'reverse' : 'play']();
+// 		// timeline2[DOM.content.title.isVisible ? 'reverse' : 'play']();
+// 		DOM.content.title.isVisible = !DOM.content.title.isVisible;
+// 	};
+// 	// DOM.links.title.anchor.addEventListener('click', () => switchContent());
+// 	switchContent();
 })();
 
 /******/ })()
