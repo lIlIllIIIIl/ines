@@ -509,6 +509,7 @@ p.presentation{
 }
 
 footer.footer_contact{
+	width: 100%;
 	box-sizing: border-box;
 	/* position: absolute; */
 	/* bottom: 0; */
