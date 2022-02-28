@@ -1,7 +1,7 @@
 gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
 /* Main navigation */
-let panelsSection = document.querySelector("#panels"),
+let panelsSection = document.querySelector("#panels-work"),
 	panelsContainer = document.querySelector("#panels-container"),
 	tween;
 document.querySelectorAll(".anchor").forEach(anchor => {
@@ -23,6 +23,7 @@ document.querySelectorAll(".anchor").forEach(anchor => {
 		});
 	});
 });
+
 /* Panels */
 const panels = gsap.utils.toArray("#panels-container .panel");
 tween = gsap.to(panels, {
@@ -30,9 +31,9 @@ tween = gsap.to(panels, {
 	ease: "none",
 	scrollTrigger: {
 		// trigger: "#panels-container",
-		trigger: "#panels",
+        trigger: "#panels",
 		pin: true,
-		start: "top top+=50px",
+		start: "top top+=150px",
 		scrub: 1,
 		snap: {
 			snapTo: 1 / (panels.length - 1),
