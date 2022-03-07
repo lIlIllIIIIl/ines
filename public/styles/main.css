@@ -474,6 +474,10 @@ p.presentation{
 	max-width: 26.4vw;
 }
 
+#panel-0{
+	width: 5vw;
+	border-right: solid 1px black;
+}
 
 /***** CONTACT *****/
 

@@ -10,6 +10,7 @@ document.querySelectorAll(".anchor").forEach(anchor => {
 		let targetElem = document.querySelector(e.target.getAttribute("href")),
 			y = targetElem;
 		if (targetElem && panelsContainer.isSameNode(targetElem.parentElement)) {
+			console.log("lol");
 			let totalScroll = tween.scrollTrigger.end - tween.scrollTrigger.start,
 				totalMovement = (panels.length - 1) * targetElem.offsetWidth;
 			y = Math.round(tween.scrollTrigger.start + (targetElem.offsetLeft / totalMovement) * totalScroll);
@@ -17,7 +18,7 @@ document.querySelectorAll(".anchor").forEach(anchor => {
 		gsap.to(window, {
 			scrollTo: {
 				y: y,
-				autoKill: false
+				autoKill: true
 			},
 			duration: 1
 		});
@@ -25,20 +26,24 @@ document.querySelectorAll(".anchor").forEach(anchor => {
 });
 /* Panels */
 const panels = gsap.utils.toArray("#panels-container .panel");
+// console.log(panelsContainer.offsetWidth - innerWidth);
+// console.log((panelsContainer.offsetWidth - innerWidth) * 10);
+console.log(panels.length);
 tween = gsap.to(panels, {
-	xPercent: -100 * ( panels.length - 1 ),
+	xPercent: -100 * ( panels.length - 2.8 ),
 	ease: "none",
 	scrollTrigger: {
 		// trigger: "#panels-container",
 		trigger: "#panels",
 		pin: true,
-		start: "top top+=50px",
+		start: "top top+=118px",
 		scrub: 1,
-		snap: {
-			snapTo: 1 / (panels.length - 1),
-			inertia: false,
-			duration: {min: 0.1, max: 0.1}
-		},
+		// snap: {
+		// 	// snapTo: 1 / (panels.length - 1),
+		// 	snapTo: 1 / (panels.length - 1),
+		// 	inertia: false,
+		// 	duration: {min: 0.1, max: 0.1}
+		// },
 		end: () =>  "+=" + (panelsContainer.offsetWidth - innerWidth)
 	}
 });
