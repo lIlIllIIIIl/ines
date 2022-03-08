@@ -1,7 +1,14 @@
+import LocomotiveScroll from 'locomotive-scroll';
+const scroll = new LocomotiveScroll();
+
+
+
+
+
 gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
 /* Main navigation */
-let panelsSection = document.querySelector("#panels-work"),
+let panelsSection = document.querySelector("#panels"),
 	panelsContainer = document.querySelector("#panels-container"),
 	tween;
 document.querySelectorAll(".anchor").forEach(anchor => {
@@ -17,29 +24,29 @@ document.querySelectorAll(".anchor").forEach(anchor => {
 		gsap.to(window, {
 			scrollTo: {
 				y: y,
-				autoKill: false
+				autoKill: true
 			},
 			duration: 1
 		});
 	});
 });
-
 /* Panels */
 const panels = gsap.utils.toArray("#panels-container .panel");
 tween = gsap.to(panels, {
-	xPercent: -100 * ( panels.length - 1 ),
+	xPercent: -100 * ( panels.length - 2.8 ),
 	ease: "none",
 	scrollTrigger: {
 		// trigger: "#panels-container",
-        trigger: "#panels",
+		trigger: "#panels",
 		pin: true,
-		start: "top top+=150px",
+		start: "top top+=118px",
 		scrub: 1,
-		snap: {
-			snapTo: 1 / (panels.length - 1),
-			inertia: false,
-			duration: {min: 0.1, max: 0.1}
-		},
+		// snap: {
+		// 	// snapTo: 1 / (panels.length - 1),
+		// 	snapTo: 1 / (panels.length - 1),
+		// 	inertia: false,
+		// 	duration: {min: 0.1, max: 0.1}
+		// },
 		end: () =>  "+=" + (panelsContainer.offsetWidth - innerWidth)
 	}
 });
