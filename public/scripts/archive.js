@@ -33,7 +33,6 @@ square_horiz.addEventListener('click', function (e) {
     page_horiz.style.display = "flex";
     page_verti.style.display = "none";
     var classtr = Array.from(page.classList)[1];
-    console.log(classtr);
     page.classList.remove(classtr);
     page.classList.add("horizontal_mode");
   }

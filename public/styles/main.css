@@ -100,6 +100,7 @@ body{
 
 .cursor{
 	mix-blend-mode: exclusion;
+	z-index: 1000;
 }
 
 /*
@@ -735,7 +736,7 @@ footer .backhome{
 
 .single_archive{
 	border-right: solid 1px black;
-	width: 10.2vw;
+	width: 22.43vw;
 	/* width: 147px; */
 	display: flex;
 	flex-direction: column;
@@ -744,8 +745,8 @@ footer .backhome{
 }
 
 .archive_project_image{
-	width: 9.2vw;
-	height: 9.2vw;
+	width: 20.3;
+	height: 20.3vw;
 }
 
 .archive_project_name{
@@ -757,6 +758,8 @@ footer .backhome{
 	display: none;
 	min-height: 100%;
 }
+
+
 
 .archive_horizontal section{
 	display: flex;
@@ -793,6 +796,8 @@ footer .backhome{
 .archive_vertical{
 	display: flex;
 	flex-direction: column;
+	margin: 0 2vw 0 5.1vw;
+	border-left: solid 1px black;
 	display: none;
 }
 
@@ -808,7 +813,7 @@ footer .backhome{
 .vertical_project_img{
 	width: 57vw;
 	/* width: 822px; */
-	height: 40vh;
+	height: 49vh;
 	/* height: 360px; */
 	margin-right: 2vw;
 	/* margin-right: 30px; */

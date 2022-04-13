@@ -22,7 +22,7 @@ document.querySelectorAll(".anchor").forEach(anchor => {
 			y = Math.round(tween.scrollTrigger.start + (targetElem.offsetLeft / totalMovement) * totalScroll);
 		}
 		gsap.to(window, {
-			scrollTo: {
+			scrollTo: {	
 				y: y,
 				autoKill: true
 			},

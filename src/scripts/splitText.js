@@ -90,8 +90,8 @@ ScrollTrigger.create({
 	trigger: ".title_contact",
 	animation: timeline2,
 		// markers: true,
-		start: "top center",
-		end: "top center",
+		start: "bottom+=2200px center",
+		end: "bottom+=2200px center",
 		toggleActions: "play none none none",
 		// scrub: 1,
 })
@@ -112,12 +112,13 @@ ScrollTrigger.create({
 	trigger: ".title_mail",
 	animation: timeline3,
 		// markers: true,
-		start: "center bottom-=150px",
-		end: "center bottom-=150px",
+		start: "bottom+=2200px center",
+		end: "bottom+=2200px center",
+		// start: "center bottom-=150px",
+		// end: "center bottom-=150px",
 		toggleActions: "play none none none",
 		// scrub: 1,
 })
-
 
 
 	// CARRES

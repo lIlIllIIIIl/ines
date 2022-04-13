@@ -31,7 +31,6 @@ square_horiz.addEventListener('click', (e)=>{
 		page_horiz.style.display="flex"
 		page_verti.style.display="none"
 		let classtr = Array.from(page.classList)[1]
-		console.log(classtr);
 		page.classList.remove(classtr)
 		page.classList.add("horizontal_mode")
 	}
