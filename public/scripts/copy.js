@@ -9,6 +9,7 @@ var mail2 = document.querySelector(".contact_mail");
 var toCopy2 = document.querySelector(".click_copy2");
 var inesMail = "inesrichard.contact@gmail.com";
 mail1.addEventListener("mouseenter", function () {
+  console.log("lol");
   toCopy1.style.display = "inline";
 });
 mail1.addEventListener("mouseleave", function () {

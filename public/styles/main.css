@@ -101,6 +101,7 @@ body{
 .cursor{
 	mix-blend-mode: exclusion;
 	z-index: 1000;
+	/* position: relative; */
 }
 
 /*
