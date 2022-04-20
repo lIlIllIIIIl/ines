@@ -1,7 +1,14 @@
-// import LocomotiveScroll from 'locomotive-scroll';
-
-// const scroll = new LocomotiveScroll({
-//     el: document.querySelector('[data-scroll-container]'),
-//     smooth: true,
-//     // multiplier: 1,
-// });
+// gsap.utils.toArray(".parallax").forEach((section, i) => {
+// 	const heightDiff = section.offsetHeight - section.parentElement.offsetHeight;
+	
+// 	gsap.fromTo(section,{ 
+// 	  y: -heightDiff
+// 	}, {
+// 	  scrollTrigger: {
+// 		trigger: section,
+// 		scrub: true
+// 	  },
+// 	  y: 0,
+// 	  ease: "none"
+// 	});
+//   });

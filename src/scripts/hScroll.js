@@ -28,7 +28,7 @@ const panels = gsap.utils.toArray("#panels-container .panel");
 tween = gsap.to(panels, {
 	xPercent: -100 * ( panels.length - 2.8 ),
 	ease: "none",
-	scrollTrigger: {
+	scrollTrigger: {	
 		// trigger: "#panels-container",
 		trigger: "#panels",
 		pin: true,

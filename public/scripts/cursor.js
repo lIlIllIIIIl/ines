@@ -38,12 +38,13 @@ document.addEventListener('mousemove', function (e) {
   // pointer.style.height = "60px"
 
   syncpointer(pointer);
-}); // document.addEventListener('scroll', () => {
-// 	pointerOffset.x = window.scrollX
-// 	pointerOffset.y = window.scrollY
-// 	// pointer.style.width = "60px"
-// 	// pointer.style.height = "60px"
-// 	syncpointer(pointer)
-// })
+});
+document.addEventListener('scroll', function () {
+  pointerOffset.x = window.scrollX;
+  pointerOffset.y = window.scrollY; // pointer.style.width = "60px"
+  // pointer.style.height = "60px"
+
+  syncpointer(pointer);
+});
 /******/ })()
 ;

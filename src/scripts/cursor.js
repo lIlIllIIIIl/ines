@@ -33,10 +33,10 @@ document.addEventListener('mousemove', e => {
 	syncpointer(pointer)
 })
 
-// document.addEventListener('scroll', () => {
-// 	pointerOffset.x = window.scrollX
-// 	pointerOffset.y = window.scrollY
-// 	// pointer.style.width = "60px"
-// 	// pointer.style.height = "60px"
-// 	syncpointer(pointer)
-// })
+document.addEventListener('scroll', () => {
+	pointerOffset.x = window.scrollX
+	pointerOffset.y = window.scrollY
+	// pointer.style.width = "60px"
+	// pointer.style.height = "60px"
+	syncpointer(pointer)
+})
