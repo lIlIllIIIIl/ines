@@ -9,11 +9,10 @@ var mail2 = document.querySelector(".contact_mail");
 var toCopy2 = document.querySelector(".click_copy2");
 var inesMail = "inesrichard.contact@gmail.com";
 mail1.addEventListener("mouseenter", function () {
-  console.log("lol");
-  toCopy1.style.display = "inline";
+  toCopy1.style.visibility = "inline"; // VISIBILITY : HIDDEN
 });
 mail1.addEventListener("mouseleave", function () {
-  toCopy1.style.display = "none";
+  toCopy1.style.visibility = "hidden";
 });
 mail2.addEventListener("mouseenter", function () {
   toCopy2.style.display = "flex";

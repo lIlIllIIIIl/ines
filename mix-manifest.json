@@ -5,6 +5,8 @@
     "/public/scripts/hScroll.js": "/public/scripts/hScroll.js",
     "/public/scripts/copy.js": "/public/scripts/copy.js",
     "/public/scripts/cursor.js": "/public/scripts/cursor.js",
+    "/public/scripts/scroll.js": "/public/scripts/scroll.js",
+    "/public/styles/test.css": "/public/styles/test.css",
     "/public/styles/project.css": "/public/styles/project.css",
     "/public/styles/main.css": "/public/styles/main.css"
 }

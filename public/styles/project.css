@@ -408,30 +408,13 @@ section.container_project{
 
 }
 
+.project_explication{
+	width: 39.8vw;
+	margin-left: 13.3vw;
+}
+
 .project_page_next{
 	height: 88.6vh;
 	display: flex;
 	align-items: center	;
-}
-
-.part1_title{
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-}
-
-.part1_sub{
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	
-}
-
-.part1_subtitle{
-	width: 280px;
-}
-
-.part1_subtext{
-	width: 39.8vw;
-	margin-left: 13.3vw;
 }

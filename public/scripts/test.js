@@ -28,7 +28,7 @@ document.querySelectorAll(".anchor").forEach(anchor => {
 const panels = gsap.utils.toArray("#panels-container .panel");
 // console.log(panelsContainer.offsetWidth - innerWidth);
 // console.log((panelsContainer.offsetWidth - innerWidth) * 10);
-console.log(panels.length);
+// console.log(panels.length);
 tween = gsap.to(panels, {
 	xPercent: -100 * ( panels.length - 2.8 ),
 	ease: "none",
