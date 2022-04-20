@@ -1,9 +1,12 @@
+
+
+
 /* start */
 
 *{
 	margin: 0;
 	scroll-behavior: smooth;
-	cursor: none;
+	/* cursor: none; */
 }
 
 html{
@@ -32,7 +35,8 @@ body{
 .cursor{
 	mix-blend-mode: exclusion;
 	z-index: 1000;
-	/* position: relative; */
+	position: fixed;
+	pointer-events: none;
 }
 
 /*
@@ -322,9 +326,6 @@ section.container{
 .vertical_blank_5{
 	height: auto;
 	width: 5.1vw;
-	/* width: 74px; */
-	border-right: solid 1px black;
-	/* padding: 37px; */
 }
 
 .blank_header{
@@ -452,7 +453,7 @@ p.presentation{
 	/* overflow-y: hidden; */
 	/* white-space: nowrap; */
 	/* scroll-snap-stop: x mandatory; */
-	margin: 50px -5.1vw;
+	margin: 3vh -5.1vw;
 	display: flex;
 	/* flex-direction: row; */
 	/* width: 100vw; */
@@ -464,6 +465,7 @@ p.presentation{
 	/* border-left: solid 1px black; */
 	border-right: solid 1px black;
 	height: 76.5vh;
+	/* width: auto; */
 	/* width: 32.6vw; */
 	
 }
@@ -475,15 +477,36 @@ p.presentation{
 
 .project h4{
 	margin: 2.5vh 0 2vh 0;
-	/* margin: 23px 0 18px 0; */
 	display: block;
+}
+
+
+.page-header {
+	position: relative;
+	width: 100%;
+	height: 400px;
+}
+
+.section-parallax {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.parallax-content {
+	background-size: cover;
+	position: relative;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
 }
 
 .project .project_image{
 	width: 26.5vw;
-	/* width: 382px; */
-	height: 52.2vh;
-	/* height: 470px; */
+	height: 32.5vw;
+	/* height: 52.2vh; */
 }
 
 .project .project_infos{
@@ -493,14 +516,11 @@ p.presentation{
 
 .project_infos span{
 	margin-bottom: 0.8vh;
-	/* margin-bottom: 8px; */
-	/* display: block; */
 	max-width: 26.4vw;
 }
 
-#panel-0{
-	width: 5vw;
-	border-right: solid 1px black;
+#panel-1{
+	border-left: solid 1px black;
 }
 
 /***** CONTACT *****/
@@ -677,8 +697,8 @@ footer .backhome{
 }
 
 .archive_project_image{
-	width: 20.3;
-	height: 20.3vw;
+	width: 20.3vw;
+	height: 20.3vh;
 }
 
 .archive_project_name{
@@ -798,19 +818,3 @@ footer .backhome{
 	top: 4000px;
 }
 
-
-
-
-
-/* Most of these styles could be removed but are for the demo to look better */
-
-html,
-body {
-  margin: 0;
-  height: 100%;
-  font-weight: 300;
-}
-
-a {
-  color: black;
-}

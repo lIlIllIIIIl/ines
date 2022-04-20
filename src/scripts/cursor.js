@@ -28,15 +28,13 @@ function syncpointer(elem = pointer) {
 document.addEventListener('mousemove', e => {
 	pointerPos.x = e.clientX-5
 	pointerPos.y = e.clientY-5
-	// pointer.style.width = "60px"
-	// pointer.style.height = "60px"
 	syncpointer(pointer)
 })
 
-document.addEventListener('scroll', () => {
-	pointerOffset.x = window.scrollX
-	pointerOffset.y = window.scrollY
-	// pointer.style.width = "60px"
-	// pointer.style.height = "60px"
-	syncpointer(pointer)
-})
+// document.addEventListener('scroll', () => {
+// 	pointerOffset.x = window.scrollX
+// 	pointerOffset.y = window.scrollY
+// 	// pointer.style.width = "60px"
+// 	// pointer.style.height = "60px"
+// 	syncpointer(pointer)
+// })
