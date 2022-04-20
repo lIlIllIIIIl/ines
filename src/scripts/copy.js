@@ -3,13 +3,14 @@ const toCopy1 = document.querySelector(".click_copy1");
 const mail2 = document.querySelector(".contact_mail");
 const toCopy2 = document.querySelector(".click_copy2");
 const inesMail = "inesrichard.contact@gmail.com";
+
 mail1.addEventListener("mouseenter", () => {
-    console.log("lol");
-	toCopy1.style.display = "inline";
+	toCopy1.style.visibility = "inline";
+    // VISIBILITY : HIDDEN
 })
 
 mail1.addEventListener("mouseleave", () => {
-	toCopy1.style.display = "none";
+	toCopy1.style.visibility = "hidden";
 })
 
 mail2.addEventListener("mouseenter", () => {

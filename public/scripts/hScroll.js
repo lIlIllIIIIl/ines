@@ -3,8 +3,6 @@ var __webpack_exports__ = {};
 /*!********************************!*\
   !*** ./src/scripts/hScroll.js ***!
   \********************************/
-// import LocomotiveScroll from 'locomotive-scroll';
-// const scroll = new LocomotiveScroll();
 gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 /* Main navigation */
 

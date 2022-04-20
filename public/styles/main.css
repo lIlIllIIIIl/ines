@@ -6,6 +6,13 @@
 	cursor: none;
 }
 
+.cursor{
+	mix-blend-mode: exclusion;
+	z-index: 1000;
+	position: fixed;
+	pointer-events: none;
+}
+
 html{
 	scroll-behavior: smooth;
 	overflow-y: scroll;
@@ -27,12 +34,6 @@ body{
 
 * ::-webkit-scrollbar{
 	display: none;
-}
-
-.cursor{
-	mix-blend-mode: exclusion;
-	z-index: 1000;
-	/* position: relative; */
 }
 
 /*
@@ -234,7 +235,7 @@ header{
 	display: flex;
 	flex-direction: row;
 	width: 65.2vw;
-	justify-content: space-between;	
+	justify-content: space-between;
 }
 
 .menu_right{
@@ -465,7 +466,7 @@ p.presentation{
 	border-right: solid 1px black;
 	height: 76.5vh;
 	/* width: 32.6vw; */
-	
+
 }
 
 .single_work .project{
@@ -813,4 +814,10 @@ body {
 
 a {
   color: black;
+}
+
+
+
+.aa{
+	position: fixed;
 }
