@@ -504,8 +504,9 @@ p.presentation{
 }
 
 .project .project_image{
+	aspect-ratio: 8 / 10;
 	width: 26.5vw;
-	height: 32.5vw;
+	/* height: 32.5vw; */
 	/* height: 52.2vh; */
 }
 
