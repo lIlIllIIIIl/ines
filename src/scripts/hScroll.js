@@ -17,7 +17,7 @@ document.querySelectorAll(".anchor").forEach(anchor => {
 		gsap.to(window, {
 			scrollTo: {
 				y: y,
-				autoKill: true
+				autoKill: false
 			},
 			duration: 1
 		});
@@ -34,6 +34,7 @@ tween = gsap.to(panels, {
 		pin: true,
 		start: "top top+=118px",
 		scrub: 1,
+		// markers: true,
 		// snap: {
 		// 	// snapTo: 1 / (panels.length - 1),
 		// 	snapTo: 1 / (panels.length - 1),
