@@ -484,13 +484,15 @@ p.presentation{
 .page-header {
 	position: relative;
 	width: 100%;
-	height: 400px;
+	/* height: 400px; */
 }
 
 .section-parallax {
 	position: relative;
-	width: 100%;
-	height: 100%;
+	width: 26.5vw;
+	max-width: 382px;
+	height: 52.5vh;
+	max-height: 470px;
 	overflow: hidden;
 }
 
@@ -499,14 +501,14 @@ p.presentation{
 	position: relative;
 	background-position: center;
 	background-repeat: no-repeat;
-	width: 100%;
+	width: 120%;
 	height: 100%;
 }
 
 .project .project_image{
-	aspect-ratio: 8 / 10;
-	width: 26.5vw;
-	/* height: 32.5vw; */
+	aspect-ratio: 0.8 / 1;
+	/* width: 26.5vw; */
+	/* width: 100%; */
 	/* height: 52.2vh; */
 }
 
