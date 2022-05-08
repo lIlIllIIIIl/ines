@@ -484,22 +484,24 @@ p.presentation{
 .page-header {
 	position: relative;
 	width: 100%;
-	height: 400px;
+	height: 100%;
 }
 
 .section-parallax {
 	position: relative;
 	width: 100%;
 	height: 100%;
+	max-width: 382px;
+	max-height: 470px;
 	overflow: hidden;
 }
 
 .parallax-content {
-	background-size: cover;
+	/* background-size: cover; */
 	position: relative;
 	background-position: center;
 	background-repeat: no-repeat;
-	width: 100%;
+	/* width: 100%; */
 	height: 100%;
 }
 

@@ -29,6 +29,8 @@ const timelineSettings = {
 	// staggerValue: 0.014,
 	charsDuration: 0.5,
 };
+const a = document.querySelectorAll('.content__item--title')
+// console.log(a);
 let timeline0 = gsap.timeline();
 timeline0
 .set(DOM.content.title.chars[1], {

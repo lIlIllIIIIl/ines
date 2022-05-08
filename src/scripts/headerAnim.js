@@ -8,30 +8,36 @@ Splitting();
 
 
 const tab = []
-
 let DOM = {
     content: {
         title: {
             section: document.querySelectorAll(".header_clickable"),
             get chars() {
-                this.section.forEach(idk =>{
-                    console.log(idk);
-                    tab.push(idk.querySelectorAll(".itemm .word > .char, whitespace"))
-                })
-                return this.section[0]
+                // this.section.forEach(idk =>{
+                //         tab.push(idk.querySelectorAll(".blbl .word > .char, whitespace"))
+                // })
+                const target = document.querySelector('.blbl');
+                const results = Splitting({ target: target, by: 'chars' });
+                return results
+                // return this.section[0]
                 // return this.section[0].querySelectorAll('.content__paragraph .word > .char, .whitespace')
-            }
+            },
+            isVisible: false
         }
     }
 }
+
+
+
+// console.log(DOM.content.title.chars[1]);
 
 const timelineSettings = {
 	staggerValue: 0.05,
 	charsDuration: 0.5,
 };
-console.log(DOM);
-// let timeline = gsap.timeline();
-// timeline.set()
+
+let timeline = gsap.timeline();
+timeline.set()
 
 
 

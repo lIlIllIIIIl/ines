@@ -6602,23 +6602,29 @@ var DOM = {
       section: document.querySelectorAll(".header_clickable"),
 
       get chars() {
-        this.section.forEach(function (idk) {
-          console.log(idk);
-          tab.push(idk.querySelectorAll(".itemm .word > .char, whitespace"));
+        // this.section.forEach(idk =>{
+        //         tab.push(idk.querySelectorAll(".blbl .word > .char, whitespace"))
+        // })
+        var target = document.querySelector('.blbl');
+        var results = splitting__WEBPACK_IMPORTED_MODULE_2___default()({
+          target: target,
+          by: 'chars'
         });
-        return this.section[0]; // return this.section[0].querySelectorAll('.content__paragraph .word > .char, .whitespace')
-      }
+        return results; // return this.section[0]
+        // return this.section[0].querySelectorAll('.content__paragraph .word > .char, .whitespace')
+      },
 
+      isVisible: false
     }
   }
-};
+}; // console.log(DOM.content.title.chars[1]);
+
 var timelineSettings = {
   staggerValue: 0.05,
   charsDuration: 0.5
 };
-console.log(DOM); // let timeline = gsap.timeline();
-// timeline.set()
-
+var timeline = gsap__WEBPACK_IMPORTED_MODULE_3__.gsap.timeline();
+timeline.set();
 var header = document.querySelector(".header");
 document.querySelectorAll(".header_clickable").forEach(function (item) {
   item.addEventListener("mouseenter", function (e) {});
