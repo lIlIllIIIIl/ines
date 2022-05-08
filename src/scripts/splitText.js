@@ -2,9 +2,9 @@ import "splitting/dist/splitting.css";
 import "splitting/dist/splitting-cells.css";
 import Splitting from "splitting";
 import { gsap } from 'gsap';
+gsap.registerPlugin(ScrollTrigger);
 
 Splitting();
-gsap.registerPlugin(ScrollTrigger);
 
 const tab = [];
 
@@ -23,7 +23,6 @@ let DOM = {
 		}
 	},
 };
-
 // gsap.set(".content__item", { opacity: 0 })
 const timelineSettings = {
 	staggerValue: 0.05,
