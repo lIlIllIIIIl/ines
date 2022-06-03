@@ -29,11 +29,12 @@ tween = gsap.to(panels, {
 	xPercent: -100 * ( panels.length - 2.8 ),
 	ease: "none",
 	scrollTrigger: {	
-		// trigger: "#panels-container",
 		trigger: "#panels",
 		pin: true,
 		start: "top top+=118px",
 		scrub: 1,
+
+		// trigger: "#panels-container",
 		// markers: true,
 		// snap: {
 		// 	// snapTo: 1 / (panels.length - 1),
@@ -41,6 +42,7 @@ tween = gsap.to(panels, {
 		// 	inertia: false,
 		// 	duration: {min: 0.1, max: 0.1}
 		// },
+
 		end: () =>  "+=" + (panelsContainer.offsetWidth - innerWidth)
 	}
 });

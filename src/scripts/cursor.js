@@ -15,8 +15,11 @@
 // //     cursorinner.style.top = y + 'px';
 // //   });
 
-const container = document.querySelector('.cursor')
-const pointer = container.querySelector('.pointer')
+const cursor = document.querySelector('.cursor')
+const pointer = cursor.querySelector('.pointer')
+const circleOne = cursor.querySelector(".circleOne")
+const circleTwo = cursor.querySelector(".circleTwo")
+
 let pointerPos = { x: 0, y: 0 }
 let pointerOffset = { x: 0, y: 0 }
 
@@ -31,10 +34,15 @@ document.addEventListener('mousemove', e => {
 	syncpointer(pointer)
 })
 
-// document.addEventListener('scroll', () => {
-// 	pointerOffset.x = window.scrollX
-// 	pointerOffset.y = window.scrollY
-// 	// pointer.style.width = "60px"
-// 	// pointer.style.height = "60px"
-// 	syncpointer(pointer)
-// })
+document.querySelectorAll(".header_clickable").forEach(item =>{
+    item.addEventListener("mouseenter", function(e) {
+		circleOne.style.transform = "translate(-0.5px, -0.5px)";
+		circleTwo.style.transform = "translate(0.5px, 0.5px)";
+        cursor.style.mixBlendMode = "normal"
+        item.addEventListener("mouseleave", function(e){
+          circleOne.style.transform = "translate(-0px, -0px)";
+          circleTwo.style.transform = "translate(0px, 0px)";
+          cursor.style.mixBlendMode = "exclusion"
+        })
+    })
+})

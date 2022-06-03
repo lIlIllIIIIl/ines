@@ -1,0 +1,51 @@
+/***** RESPONSIVE *****/
+
+@media screen and (max-width: 1425px) {
+    .build .title_contact{
+        column-gap: 0;
+        text-align: left;
+        justify-content: flex-start;
+    }
+    .build .title_contact > span{
+        width: 100%;
+    }
+	.build_fun{
+		order: 3;
+        justify-content: center;
+	}
+}
+
+@media screen and (max-width: 1150px) {
+    .contact_catch{
+        order: 3;
+        max-width: 15vw;
+        min-width: 190px;
+    }
+    .contact_mail{
+        font-weight: 400;
+        /* font-style: normal; */
+        font-size: 35px;
+        line-height: 40px;
+    }
+    .contact_mail_copy{
+        order: 2;
+        text-align: right;
+        margin-top: 8vh;
+    }
+
+    .build{
+        row-gap: 4vh;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .contact_mail > span{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 1000) {
+    .contact_mail > span{
+        display: block;
+    }
+}

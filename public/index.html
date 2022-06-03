@@ -6,23 +6,25 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 	<link rel="stylesheet" href="../styles/main.css">
+	<link rel="stylesheet" href="../styles/responsive/main.responsive.css">
 	<!-- <link rel="stylesheet" href="../styles/test.css"> -->
 </head>
 <body>
 	<!-- <div class="aa" data-scroll-container> -->
 	<div class="cursor">
 		<div class="pointer">
-			<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-				<g style="mix-blend-mode:exclusion">
-				<circle cx="6.5147" cy="6.5147" r="5.4854" fill="white"/>
+			<svg class="pointer_r" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<!-- <g class="circleOne"> -->
+				<g class="circleOne" style="mix-blend-mode:exclusion">
+					<circle cx="6.5147" cy="6.5147" r="5.4854" fill="white"/>
 				</g>
-				<g style="mix-blend-mode:exclusion">
-				<circle cx="5.4854" cy="5.4854" r="5.4854" fill="white"/>
+				<!-- <g class="circleTwo"> -->
+				<g class="circleTwo" style="mix-blend-mode:exclusion">
+					<circle cx="5.4854" cy="5.4854" r="5.4854" fill="white"/>
 				</g>
-				</svg>
+			</svg>
 		</div>
 	</div>
-
 
 
 	<header>
@@ -44,8 +46,6 @@
 			</div>
 		</div>
 	</header>
-
-
 
 	<main id="content" class="site-content" role="main">
 		<!-- <article class="scroller"> -->
@@ -77,6 +77,7 @@
 					</div>
 				</div>
 			</section>
+			
 			<section class="container" id="container_intro">
 				<div class="horizontal_blank_4"></div>
 				<div class="blank_header"></div>
@@ -89,7 +90,25 @@
 						<span class="highcap">JUNIOR CREATIVE DESIGNER</span>
 					</div>
 					<div class="vertical_blank_2"></div>
-					<div class="what">
+
+					<div class="what_rows">
+
+						<div class="what-row what-row1">
+							<h4 class="whatSubTitle"><span class="smallcap">(super) </span>INTERESTED IN</h4>
+							<span><h1>Innotative interfaces</h1></span>
+						</div>
+						<div class="what-row what-row2">
+							<h4 class="whatSubTitle">WITH <span class="smallcap">(really) </span> SMOOTH</h4>
+							<span ><h1>Motion design</h1></span>
+						</div>
+						<div class="what-row what-row3">
+							<h4 class="whatSubTitle"><span class="smallcap">(carried by) </span> BEAUTIFUL</h4>
+							<span><h1>Art direction</h1></span>
+						</div>
+
+					</div>
+
+					<!-- <div class="what">
 						<h4 class="what_first"><span class="smallcap">(super)</span>INTERESTED IN</h4>
 						<h4>WITH <span class="smallcap">(really)</span> SMOOTH</h4>
 						<h4><span class="smallcap">(carried by)</span> BEAUTIFUL</h4>
@@ -99,12 +118,17 @@
 						<span class="work"><h1>Innotative interfaces</h1></span>
 						<span class="work"><h1>Motion design</h1></span>
 						<span class="work"><h1>Art direction</h1></span>
-					</div>
+					</div> -->
+
+
+
+
+
 				</div>
 				<div class="horizontal_blank_1"></div>
 				<div class="last_intro">
 					<div class="vertical_blank_3"></div>
-					<p class="smallcap presentation">Hey, I’m Inès, currently a third year student at Hétic (Paris), looking for a six months international internship as a UI/interfactive designer.</p>
+					<p class="smallcap presentation">Hey, I’m Inès, currently a third year student at Hetic (Paris), looking for a six months international internship as a UI/interactive designer.</p>
 				</div>
 				<div class="horizontal_blank_6"></div>
 				<a class="explore smallcap" href="#container_work">↓ Explore </a>
@@ -114,6 +138,7 @@
 
 				<div class="horizontal_blank_4"></div>
 				
+				<!-- <img class="test project_image" src="./images/main_work/work-sf-illu.jpg"> -->
 				<section id="panels">
 					<section class="content__item content__item--title content__item--title">
 						<h1 class="content__paragraph title_work" data-splitting>Work</h1>
@@ -141,7 +166,7 @@
 								<div class="project">
 										<section class="section page-header">
 											<div class="section-parallax">
-												<div class="parallax-content project_image" style="background-image: url('./images/main_work/work-bump.jpg');"></div>
+												<div class="parallax-content project_image" style="background-image: url('./images/main_work/work-sf-illu.jpg');"></div>
 											</div>
 										</section>
 									<!-- <img class="project_image" alt="chaise" src="../images/main_work/book.jpg"> -->
@@ -157,7 +182,7 @@
 								<div class="project">
 									<section class="section page-header">
 										<div class="section-parallax">
-											<div class="parallax-content project_image" style="background-image: url('./images/main_work/work-manhattan-typographic-guide.jpg');"></div>
+											<div class="parallax-content project_image" style="background-image: url('./images/main_work/work-sf-illu.jpg');"></div>
 										</div>
 									</section>
 									<!-- <img class="project_image" alt="chaise" src="../images/main_work/sf.jpg"> -->
@@ -173,7 +198,7 @@
 								<div class="project">
 									<section class="section page-header">
 										<div class="section-parallax">
-											<div class="parallax-content project_image" style="background-image: url('./images/main_work/work-alexis.jpg');"></div>
+											<div class="parallax-content project_image" style="background-image: url('./images/main_work/work-sf-illu.jpg');"></div>
 										</div>
 									</section>
 									<!-- <img class="project_image" alt="chaise" src="../images/main_work/nike.jpg"> -->
@@ -189,7 +214,7 @@
 								<div class="project">
 									<section class="section page-header">
 										<div class="section-parallax">
-											<div class="parallax-content project_image" style="background-image: url('./images/main_work/work-soliman.jpg');"></div>
+											<div class="parallax-content project_image" style="background-image: url('./images/main_work/work-sf-illu.jpg');"></div>
 										</div>
 									</section>
 									<!-- <img class="project_image" alt="chaise" src="../images/main_work/chaise.jpg"> -->
@@ -205,7 +230,7 @@
 								<div class="project">
 									<section class="section page-header">
 										<div class="section-parallax">
-											<div class="parallax-content project_image" style="background-image: url('./images/main_work/work-nike-website.jpg');"></div>
+											<div class="parallax-content project_image" style="background-image: url('./images/main_work/work-sf-illu.jpg');"></div>
 										</div>
 									</section>
 									<!-- <img class="project_image" alt="chaise" src="../images/main_work/soly.jpg"> -->
@@ -221,7 +246,7 @@
 								<div class="project">
 									<section class="section page-header">
 										<div class="section-parallax">
-											<div class="parallax-content project_image" style="background-image: url('./images/main_work/work-pimpim.jpg');"></div>
+											<div class="parallax-content project_image" style="background-image: url('./images/main_work/work-sf-illu.jpg');"></div>
 										</div>
 									</section>
 									<!-- <img class="project_image" alt="chaise" src="../images/main_work/f9.jpg"> -->
@@ -237,7 +262,7 @@
 								<div class="project">
 									<section class="section page-header">
 										<div class="section-parallax">
-											<div class="parallax-content project_image" style="background-image: url('./images/main_work/work-eclipse.jpg');"></div>
+											<div class="parallax-content project_image" style="background-image: url('./images/main_work/work-sf-illu.jpg');"></div>
 										</div>
 									</section>
 									<!-- <img class="project_image" alt="chaise" src="../images/main_work/eclipse.jpg"> -->
@@ -270,23 +295,21 @@
 				</section>
 		<section class="container container_contact" id="container_contact">
 			<div class="horizontal_blank_4"></div>
-			<div class="blank_header"></div>
+			<!-- <div class="blank_header"></div> -->
 			<div class="build">
-				<section class="content__item content__item--title content__item--title ">
-					<h1 class="content__paragraph title_contact" data-splitting>Let's build something <span class="highcap">(IT SHOULD BE FUN!)</span> together</h1>
+				<div class="contact-title-text">
+					<section class="content__item content__item--title content__item--title ">
+						<h1 class="content__paragraph title_contact" data-splitting> <span>Let's build something </span> <span class="highcap build_fun">(IT SHOULD BE FUN!)</span> <span> together </span> </h1>
+					</section>
+					<p class="contact_catch smallcap">
+						Feel free to contact me for any kind of subject! Also I’m l currently looking for an internship in UI/interactive design in New York or San Francisco so if you’re interested, get in touch so we can talk about it :)
+					</p>
+				</div>
+				<section class="contact_mail_copy content__item content__item--title content__item--title ">
+					<!-- <span class="click_copy2">click to copy!</span> -->
+					<h1 class="contact_mail content__paragraph title_mail" data-splitting><span>inesrichard.contact</span><span>@gmail.com</span></h1>
 				</section>
-				<!-- <h1>Let's build something <span class="highcap">(IT SHOULD BE FUN!)</span> together</h1> -->
-				<div class="vertical_blank_4"></div>
-				<p class="contact_catch smallcap">
-					Feel free to contact me for any kind of subject! Also I’m l currently looking for an internship in UI/interactive design in New York or San Francisco so if you’re interested, get in touch so we can talk about it :)
-				</p>
 			</div>
-			<div class="horizontal_blank_3"></div>
-			<section class="content__item content__item--title content__item--title ">
-				<span class="click_copy2">click to copy!</span>
-				<h1 class="contact_mail content__paragraph title_mail" data-splitting>inesrichard.contact@gmail.com</h1>
-			</section>
-			<!-- <h1 class="contact_mail">inesrichard.contact@gmail.com</h1> -->
 			<footer class="footer_contact">
 				<div class="footer_contact_left">
 					<a class="backhome smallcap" href="#container_intro">↑ Back home</a>
@@ -315,6 +338,7 @@
 	<script type="text/javascript" src="../scripts/hScroll.js"></script>
 	<script type="text/javascript" src="../scripts/scroll.js"></script>
 	<script type="text/javascript" src="../scripts/headerAnim.js"></script>
-	<script type="text/javascript" src="../scripts/copy.js"></script>
+	<script type="text/javascript" src="../scripts/linesApparition.js"></script>
+	<!-- <script type="text/javascript" src="../scripts/copy.js"></script> -->
 </body>
 </html>
