@@ -23,10 +23,31 @@ document.querySelectorAll(".anchor").forEach(anchor => {
 		});
 	});
 });
+
 /* Panels */
 const panels = gsap.utils.toArray("#panels-container .panel");
+
+// Scroll strengh
+let percentScroll
+const lol = function(){
+	console.log("lol");
+}
+
+const screenScroll = function(){
+	if (document.body.clientWidth > 700 ){
+		percentScroll = -100
+		return percentScroll
+	} else {
+		percentScroll = -50
+		return percentScroll
+	}
+}
+let scrollStr = screenScroll()
+
+
 tween = gsap.to(panels, {
-	xPercent: -100 * ( panels.length - 2.8 ),
+	y: 0.1,
+	xPercent: scrollStr * ( panels.length - 2.8 ),
 	ease: "none",
 	scrollTrigger: {	
 		trigger: "#panels",

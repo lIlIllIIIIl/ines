@@ -14,11 +14,9 @@
 	<div class="cursor">
 		<div class="pointer">
 			<svg class="pointer_r" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-				<!-- <g class="circleOne"> -->
 				<g class="circleOne" style="mix-blend-mode:exclusion">
 					<circle cx="6.5147" cy="6.5147" r="5.4854" fill="white"/>
 				</g>
-				<!-- <g class="circleTwo"> -->
 				<g class="circleTwo" style="mix-blend-mode:exclusion">
 					<circle cx="5.4854" cy="5.4854" r="5.4854" fill="white"/>
 				</g>
@@ -39,10 +37,20 @@
 				</svg>
 			</a>
 			<div class="menu">
-				<a class="menu_item header_clickable itemm" id="lol" href="#container_intro"><span class="blbl">about</span> </a>
-				<a class="menu_item header_clickable itemm" href="#container_work"><span class="blbl">work</span></a>
-				<a class="menu_item header_clickable itemm" href="#container_contact"><span class="blbl">contact</span></a>
-				<a class="menu_item header_clickable itemm" href="./pages/archive.html"><span class="blbl">archive</span></a>
+				<a class="menu_item header_clickable item_menu" href="#container_intro"><span>menu</span></a>
+				<!-- <section class="content__item content__item--title content__item--title">
+					<a class="menu_item header_clickable item_menu content__paragraph title_work" href="#container_intro" data-splitting><span class="blbl">menu</span></a>
+				</section> -->
+				<a class="menu_item header_clickable itemm" href="#container_intro"><span>about</span> </a>
+				<a class="menu_item header_clickable itemm" href="#container_work"><span>work</span></a>
+				<a class="menu_item header_clickable itemm" href="#container_contact"><span>contact</span></a>
+				<a class="menu_item header_clickable itemm" href="./pages/archive.html"><span>archive</span></a>
+				<svg class="menu_item main_menu" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<g style="mix-blend-mode:exclusion">
+						<path d="M9.99788 4.99846C8.67276 5.00069 7.40256 5.52808 6.46556 6.46508C5.52856 7.40208 5.00117 8.67228 4.99894 9.9974C4.01114 9.99677 3.0457 9.70332 2.22463 9.15414C1.40357 8.60495 0.763747 7.82469 0.386023 6.91196C0.0082988 5.99924 -0.090367 4.99502 0.102497 4.02623C0.295361 3.05744 0.771089 2.16757 1.46957 1.46909C2.16805 0.770614 3.05791 0.294873 4.0267 0.102009C4.99549 -0.0908553 5.99972 0.00781052 6.91244 0.385535C7.82517 0.763259 8.60543 1.40309 9.15461 2.22415C9.70379 3.04522 9.99725 4.01066 9.99788 4.99846Z" fill="white"/>
+						<path d="M15 9.99894C15 11.325 14.4732 12.5968 13.5355 13.5345C12.5979 14.4722 11.3261 14.9989 10 14.9989C8.67392 14.9989 7.40215 14.4722 6.46447 13.5345C5.52679 12.5968 5 11.325 5 9.99894C6.32511 9.9967 7.59532 9.46931 8.53232 8.53231C9.46931 7.59532 9.9967 6.32511 9.99894 5C11.3243 5.00224 12.5947 5.52956 13.532 6.4665C14.4693 7.40344 14.9972 8.67363 15 9.99894Z" fill="white"/>
+					</g>
+				</svg>
 			</div>
 		</div>
 	</header>
@@ -84,26 +92,34 @@
 				<div class="intro_content">
 					<div class="intro">
 						<div class="ines">
-							<section class="content__item content__item--title">
-								<section class="content__item content__item--title content__item--title ">
+							<section class="content__item--title">
+								<section class="content__item--title">
 									<h1 class="content__paragraph title_ines" data-splitting>Inès Richard</h1>
 								</section>
 							</section>
 							<span class="highcap creative_designer">JUNIOR CREATIVE DESIGNER</span>
 						</div>
-						<!-- <div class="vertical_blank_2"></div> -->
 						<div class="what_rows">
 							<div class="what-row what-row1">
 								<h4 class="whatSubTitle"><span class="smallcap">(super) </span>INTERESTED IN</h4>
-								<span><h1>Innotative interfaces</h1></span>
+								<section class="content__item content__item--title content__item--title">
+									<h1 class="content__paragraph title_work" data-splitting>Innotative interfaces</h1>
+								</section>
+								<!-- <h1>Innotative interfaces</h1> -->
 							</div>
 							<div class="what-row what-row2">
 								<h4 class="whatSubTitle">WITH <span class="smallcap">(really) </span> SMOOTH</h4>
-								<span ><h1>Motion design</h1></span>
+								<section class="content__item content__item--title content__item--title">
+									<h1 class="content__paragraph title_work" data-splitting>Motion design</h1>
+								</section>
+								<!-- <h1>Motion design</h1> -->
 							</div>
 							<div class="what-row what-row3">
 								<h4 class="whatSubTitle"><span class="smallcap">(carried by) </span> BEAUTIFUL</h4>
-								<span><h1>Art direction</h1></span>
+								<section class="content__item content__item--title content__item--title">
+									<h1 class="content__paragraph title_work" data-splitting>Art direction</h1>
+								</section>
+								<!-- <h1>Art direction</h1> -->
 							</div>
 							<div class="what-row intro-last_text">
 								<p class="smallcap presentation">Hey, I’m Inès, currently a third year student at Hetic (Paris), looking for a six months international internship as a UI/interactive designer.</p>
@@ -118,14 +134,13 @@
 
 				<div class="horizontal_blank_4"></div>
 				
-				<!-- <img class="test project_image" src="./images/main_work/work-sf-illu.jpg"> -->
 				<section id="panels">
 					<section class="content__item content__item--title content__item--title">
 						<h1 class="content__paragraph title_work" data-splitting>Work</h1>
 					</section>
-					<div id="panels-container" style="width: 300vw">
+					<div id="panels-container">
 						<div class="work_list">
-							<div class="vertical_blank_5"></div>
+							<div class="vertical_blank_5 blank_works"></div>
 							<article id="panel-1" class="panel full-screen single_work">
 								<div class="project">
 									<section class="section page-header">
@@ -133,31 +148,29 @@
 											<div class="parallax-content project_image" style="background-image: url('./images/main_work/work-sf-illu.jpg');"></div>
 										</div>
 									</section>
-									<!-- <img class="project_image" alt="chaise" src="../images/main_work/chaise.jpg"> -->
 									<h4>3D JPN [KORIUM]</h4>
 									<div class="project_infos">
 										<span class="smallcap">DATE: September 2021</span>
 										<span class="smallcap">ROLE: 3D, artistic direction, webdesign, prototyping</span>
-										<!-- <span>WITH: Soliman Al Halaby</span> -->
 									</div>
 								</div>
 							</article>
+
 							<article id="panel-2" class="panel full-screen single_work">
 								<div class="project">
-										<section class="section page-header">
-											<div class="section-parallax">
-												<div class="parallax-content project_image" style="background-image: url('./images/main_work/work-sf-illu.jpg');"></div>
-											</div>
-										</section>
-									<!-- <img class="project_image" alt="chaise" src="../images/main_work/book.jpg"> -->
-									<h4>MANHATTAN TYPOGRAPHIC GUIDE</h4>
+									<section class="section page-header">
+										<div class="section-parallax">
+											<div class="parallax-content project_image" style="background-image: url('./images/main_work/work-sf-illu.jpg');"></div>
+										</div>
+									</section>
+									<h4>3D JPN [KORIUM]</h4>
 									<div class="project_infos">
-										<span class="smallcap">DATE: April 2021</span>
-										<span class="smallcap">ROLE: artistic direction</span>
-										<!-- <span>WITH: /</span> -->
+										<span class="smallcap">DATE: September 2021</span>
+										<span class="smallcap">ROLE: 3D, artistic direction, webdesign, prototyping</span>
 									</div>
 								</div>
 							</article>
+
 							<article id="panel-3" class="panel full-screen single_work">
 								<div class="project">
 									<section class="section page-header">
@@ -165,15 +178,14 @@
 											<div class="parallax-content project_image" style="background-image: url('./images/main_work/work-sf-illu.jpg');"></div>
 										</div>
 									</section>
-									<!-- <img class="project_image" alt="chaise" src="../images/main_work/sf.jpg"> -->
-									<h4>SAN FRANCISCO ILLUSTRATIONS</h4>
+									<h4>3D JPN [KORIUM]</h4>
 									<div class="project_infos">
-										<span class="smallcap">DATE: November 2020</span>
-										<span class="smallcap">ROLE: artistic direction, illustration</span>
-										<!-- <span>WITH: /</span> -->
+										<span class="smallcap">DATE: September 2021</span>
+										<span class="smallcap">ROLE: 3D, artistic direction, webdesign, prototyping</span>
 									</div>
 								</div>
 							</article>
+
 							<article id="panel-4" class="panel full-screen single_work">
 								<div class="project">
 									<section class="section page-header">

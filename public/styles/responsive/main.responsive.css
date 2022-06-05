@@ -32,6 +32,18 @@
 }
 
 @media screen and (max-width: 900px) {
+    .main_menu{
+        display: inline;
+    }
+
+    .header_clickable{
+        display: none;
+    }
+
+    .header_clickable.item_menu{
+        display: inline;
+    }
+
     div.intro{
         flex-direction: column;
         justify-content: space-between;
@@ -105,8 +117,37 @@
     }
 }
 
-@media screen and (max-width: 1000) {
+@media screen and (max-width: 1000px) {
     .contact_mail > span{
         display: block;
+    }
+}
+
+/* ///// WORK ///// */
+
+
+@media screen and (max-width: 700px) {
+    .blank_works{
+        width: 30px;
+        flex-shrink: 0;
+    }
+
+
+    .single_work .project{
+        margin: 4.4vh 10vw;
+    }
+
+    .project .project_image{
+        aspect-ratio: 8 / 10;
+        width: 283px;
+        height: 400px;
+    }
+
+    .project h4{
+        margin: 0;
+    }
+
+    .project_infos span{
+        max-width: 100%;
     }
 }

@@ -32,9 +32,28 @@ document.querySelectorAll(".anchor").forEach(function (anchor) {
 });
 /* Panels */
 
-var panels = gsap.utils.toArray("#panels-container .panel");
+var panels = gsap.utils.toArray("#panels-container .panel"); // Scroll strengh
+
+var percentScroll;
+
+var lol = function lol() {
+  console.log("lol");
+};
+
+var screenScroll = function screenScroll() {
+  if (document.body.clientWidth > 700) {
+    percentScroll = -100;
+    return percentScroll;
+  } else {
+    percentScroll = -50;
+    return percentScroll;
+  }
+};
+
+var scrollStr = screenScroll();
 tween = gsap.to(panels, {
-  xPercent: -100 * (panels.length - 2.8),
+  y: 0.1,
+  xPercent: scrollStr * (panels.length - 2.8),
   ease: "none",
   scrollTrigger: {
     trigger: "#panels",

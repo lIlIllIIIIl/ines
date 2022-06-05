@@ -26,16 +26,17 @@ let DOM = {
 		}
 	},
 };
-// gsap.set(".content__item", { opacity: 0 })
+
 const timelineSettings = {
 	staggerValue: 0.05,
 	// staggerValue: 0.014,
 	charsDuration: 0.5,
 };
 const a = document.querySelectorAll('.content__item--title')
-// console.log(a);
-let timeline0 = gsap.timeline();
-timeline0
+console.log(a);
+
+let timeline1 = gsap.timeline();
+timeline1
 .set(DOM.content.title.chars[1], {
 	opacity: 1,
 	ease: 'Power3.easeIn',
@@ -48,16 +49,16 @@ timeline0
 		})
 ScrollTrigger.create({
 	trigger: ".title_ines",
-	animation: timeline0,
+	animation: timeline1,
 		// markers: true,
-		start: "center center",
-		end: "center center",
+		start: "top center",
+		end: "top center",
 		toggleActions: "play none none none",
 		// scrub: 1,
 })
 
-let timeline1 = gsap.timeline();
-timeline1
+let timeline2 = gsap.timeline();
+timeline2
 .set(DOM.content.title.chars[2], {
 	opacity: 1,
 	ease: 'Power3.easeIn',
@@ -70,38 +71,38 @@ timeline1
 		})
 ScrollTrigger.create({
 	trigger: ".title_work",
-	animation: timeline1,
-		// markers: true,
-		start: "center center",
-		end: "center center",
-		toggleActions: "play none none none",
-		// scrub: 1,
-})
-
-let timeline2 = gsap.timeline();
-timeline2
-.set(DOM.content.title.chars[3], {
-	opacity: 1,
-	ease: 'Power3.easeIn',
-	y: '600%'
-}, 'switchtime')
-.to( DOM.content.title.chars[3], timelineSettings.charsDuration, {
-			ease: 'Power3.easeOut',
-			y: '0%',
-			stagger: 0.02,
-		})
-ScrollTrigger.create({
-	trigger: ".title_contact",
 	animation: timeline2,
 		// markers: true,
-		start: `bottom+=${panelSize}px center`,
-		end: `bottom+=${panelSize}px center`,
+		start: "top center",
+		end: "top center",
 		toggleActions: "play none none none",
 		// scrub: 1,
 })
 
 let timeline3 = gsap.timeline();
 timeline3
+.set(DOM.content.title.chars[3], {
+	opacity: 1,
+	ease: 'Power3.easeIn',
+	y: '200%'
+}, 'switchtime')
+.to( DOM.content.title.chars[3], timelineSettings.charsDuration, {
+			ease: 'Power3.easeOut',
+			y: '0%',
+			stagger: 0.04,
+		})
+ScrollTrigger.create({
+	trigger: ".title_work",
+	animation: timeline3,
+		// markers: true,
+		start: "top center",
+		end: "top center",
+		toggleActions: "play none none none",
+		// scrub: 1,
+})
+
+let timeline4 = gsap.timeline();
+timeline4
 .set(DOM.content.title.chars[4], {
 	opacity: 1,
 	ease: 'Power3.easeIn',
@@ -110,14 +111,62 @@ timeline3
 .to( DOM.content.title.chars[4], timelineSettings.charsDuration, {
 			ease: 'Power3.easeOut',
 			y: '0%',
-			stagger: 0.02,
+			stagger: 0.04,
 		})
 ScrollTrigger.create({
-	trigger: ".title_mail",
-	animation: timeline3,
+	trigger: ".title_work",
+	animation: timeline4,
 		// markers: true,
-		start: `bottom+=${panelSize + 200}px center`,
-		end: `bottom+=${panelSize + 200}px center`,
+		start: "top center",
+		end: "top center",
 		toggleActions: "play none none none",
 		// scrub: 1,
 })
+
+
+
+////////////////////// FIN DE PAGE /!\ A GARDER ////////////////////////////////
+
+// let timeline2 = gsap.timeline();
+// timeline2
+// .set(DOM.content.title.chars[3], {
+// 	opacity: 1,
+// 	ease: 'Power3.easeIn',
+// 	y: '600%'
+// }, 'switchtime')
+// .to( DOM.content.title.chars[3], timelineSettings.charsDuration, {
+// 			ease: 'Power3.easeOut',
+// 			y: '0%',
+// 			stagger: 0.02,
+// 		})
+// ScrollTrigger.create({
+// 	trigger: ".title_contact",
+// 	animation: timeline2,
+// 		// markers: true,
+// 		start: `bottom+=${panelSize}px center`,
+// 		end: `bottom+=${panelSize}px center`,
+// 		toggleActions: "play none none none",
+// 		// scrub: 1,
+// })
+
+// let timeline3 = gsap.timeline();
+// timeline3
+// .set(DOM.content.title.chars[4], {
+// 	opacity: 1,
+// 	ease: 'Power3.easeIn',
+// 	y: '200%'
+// }, 'switchtime')
+// .to( DOM.content.title.chars[4], timelineSettings.charsDuration, {
+// 			ease: 'Power3.easeOut',
+// 			y: '0%',
+// 			stagger: 0.02,
+// 		})
+// ScrollTrigger.create({
+// 	trigger: ".title_mail",
+// 	animation: timeline3,
+// 		// markers: true,
+// 		start: `bottom+=${panelSize + 200}px center`,
+// 		end: `bottom+=${panelSize + 200}px center`,
+// 		toggleActions: "play none none none",
+// 		// scrub: 1,
+// })
