@@ -356,12 +356,18 @@ section.container{
 
 /*  */
 
+div.intro_content{
+	height: 74.5vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
 div.intro{
-	/* height: 180px; */
 	height: auto;
 	display: flex;
-	/* margin: 205px 75px 0  0; */
 	flex-direction: row;
+	justify-content: space-between;
 }
 
 .intro .ines{
@@ -388,47 +394,26 @@ div.intro{
 	margin-left: 60px;
 }
 
-/* .intro .what{
-	height: 15.6vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-}
-.intro .what span, .intro .what h4{
-	margin-bottom: 6.7vh;
-	width: auto;
-}
-
-.what_first{
-	margin-top: 4.5vh;
-}
-
-.intro .cap{
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-}
-
-.cap .work{
-	margin-bottom: 2.2vh;
-} */
-
 p.presentation{
-	width: 16.5vw;
-	/* width: 237px; */
+	width: 20vw;
+	margin-left: 60px;
+	margin-top: 7vh;
+}
+
+.intro-last_text{
+	display: flex;
+	flex-direction: column;
 }
 
 .last_intro{
 	display: flex;
-	flex-direction: row;
+	flex-direction: row-reverse;
 }
 
 .explore{
-	/* position: absolute; */
 	bottom: 5.5vh;
 	left: 5.2vw;
-	/* bottom: 50px;
-	left: 75px; */
+	margin-bottom: 5vh;
 }
 
 .explore:hover{
@@ -453,12 +438,7 @@ p.presentation{
 }
 
 .work_list .single_work{
-	/* border-left: solid 1px black; */
 	border-right: solid 1px black;
-	height: 76.5vh;
-	/* width: auto; */
-	/* width: 32.6vw; */
-	
 }
 
 .single_work .project{

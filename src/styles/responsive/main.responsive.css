@@ -1,4 +1,64 @@
-/***** RESPONSIVE *****/
+@media screen and (max-width: 1360px) {
+    h1{
+        font-family: Migra;
+        font-weight: 400;
+        /* font-style: normal; */
+        font-size: 55px;
+        line-height: 50px;
+        margin: 0;
+        padding: 0;
+    }
+    h4{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 40px;
+    }
+}
+
+
+@media screen and (max-width: 1360px) {
+    .what-row{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .what-row h1{
+        margin: 0;
+    }
+
+    p.presentation{
+        margin-left: 0px;
+        margin-top: 3vh;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    div.intro{
+        flex-direction: column;
+        justify-content: space-between;
+        height: 50vh;
+    }
+    .ines .title_ines{
+        width: 100vw;
+    }
+    .ines .creative_designer{
+        width: 100vw;
+    }
+
+    .what_rows{
+        margin-left: 10vw;
+    }
+
+    .what-row h1{
+        font-weight: 400;
+        font-size: 35px;
+        line-height: 40px;
+    }
+
+    p.presentation{
+        width: 70vw;
+    }
+}
+
 
 @media screen and (max-width: 1425px) {
     .build .title_contact{
