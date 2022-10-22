@@ -6618,9 +6618,10 @@ var timelineSettings = {
   staggerValue: 0.05,
   // staggerValue: 0.014,
   charsDuration: 0.5
-};
-var a = document.querySelectorAll('.content__item--title');
-console.log(a);
+}; // const a = document.querySelectorAll('.content__item--title')
+// console.log(a);
+
+console.log(DOM.content.title.chars[1]);
 var timeline1 = gsap__WEBPACK_IMPORTED_MODULE_3__.gsap.timeline();
 timeline1.set(DOM.content.title.chars[1], {
   opacity: 1,
